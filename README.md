@@ -24,20 +24,45 @@ we will simply use timelagged observation pairs as training data of the network.
 
 We will implement a short HMM routine to generate our test trajectory and visualize the resulting data.
 
-### Overview
-
-
-
 ### Contents
 
 
 ### Example
 
+```python
+import numpy as np
+import models
+from hmm_data import generate_trajectory
+from sklearn import preprocessing
 
-### Requirements:
+x,clusters = generate_trajectory(2000)
 
-### Installation
+def transform(x):
+    #transform data to a nonlinear problem
+    #(x,y) -> (x,y+sqrt(abs(x)))
+    y_ = x[:,1]+np.sqrt(abs(x[:,0]))
+    return np.vstack([x[:,0],y_]).T
 
+traj = transform(x)
+
+test_traj_,test_clusters = generate_trajectory(2000,start_state=1)
+test_traj = transform(test_traj_)
+
+optimal_solution = preprocessing.scale(test_traj_[:,1])
+
+
+tau=20
+autoencoder,encoder,decoder = models.Autoencoder(2,1,regularization='l2',W_penalty=0.01,b_penalty=0.01,optimizer='rmsprop')
+autoencoder.fit(traj[0:-tau,:],traj[tau:,:],batch_size=32, epochs=250, verbose=0, callbacks=[], validation_split=0.0, validation_data=None, 
+                shuffle=True, class_weight=None, sample_weight=None, initial_epoch=0)
+
+encoded_traj = encoder.predict(test_traj)
+
+def scale(x):
+    return (x-x.mean())/x.std()
+
+encoded1 = scale(encoded_traj)
+```
 
 ### References
 

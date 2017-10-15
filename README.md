@@ -24,8 +24,7 @@ we will simply use timelagged observation pairs as training data of the network.
 
 We will implement a short HMM routine to generate our test trajectory and visualize the resulting data.
 
-### Example
-Data:
+### Application Example
 
 We generate a training trajectory and a test trajectory from an HMM
 model with two metastable states and transform the data nonlinearly. 
@@ -57,13 +56,16 @@ optimal_solution = scale(test_traj_[:,1])
 ![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/01_data_overview.png )
 
 The (auto)covariance
-of the process in all linear subspace directions makes it impossible to detect the two states with 
+of the transformed process in all linear subspace directions makes it impossible to detect the two states with 
 commonly used dimensionality reduction methods.
 
 ![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/02_data_transformation.png )
 
-Model:
+Application of classical methods to the HMM trajectory:
 
+![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/03_comparison.png )
+
+Autoencoder instantiation and training:
 
 ```python
 
@@ -76,6 +78,10 @@ encoded_traj = encoder.predict(test_traj)
 
 encoded1 = scale(encoded_traj)
 ```
+
+Application of different timelagged Autoencoders architectures:
+
+![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/04_encoders.png )
 
 ### References
 

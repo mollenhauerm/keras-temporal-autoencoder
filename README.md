@@ -54,13 +54,13 @@ optimal_solution = scale(test_traj_[:,1])
 
 ```
 
-![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/01_data_overview.png ")
+![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/01_data_overview.png )
 
 The (auto)covariance
 of the process in all linear subspace directions makes it impossible to detect the two states with 
 commonly used dimensionality reduction methods.
 
-![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/02_data_transformation.png ")
+![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/02_data_transformation.png )
 
 Model:
 

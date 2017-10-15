@@ -24,10 +24,18 @@ we will simply use timelagged observation pairs as training data of the network.
 
 We will implement a short HMM routine to generate our test trajectory and visualize the resulting data.
 
-### Contents
-
-
 ### Example
+Data:
+
+We generate a training trajectory and a test trajectory from an HMM
+model with two metastable states and transform the data nonlinearly. The (auto)covariance
+of the process makes it impossible to detect the two states with 
+commonly used dimensionality reduction methods.
+
+
+
+Model:
+
 
 ```python
 import numpy as np

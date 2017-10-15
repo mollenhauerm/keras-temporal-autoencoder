@@ -81,7 +81,7 @@ encoded1 = scale(encoded_traj)
 
 Application of different timelagged Autoencoders architectures:
 
-![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/04_encoders.png )
+![](https://raw.githubusercontent.com/mmontana/keras_temporal_autoencoder/master/img/04_encoders.png)
 
 ### References
 

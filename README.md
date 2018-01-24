@@ -85,3 +85,23 @@ Application of different timelagged Autoencoders architectures:
 
 ### References
 
+Andreas Mardt, Luca Pasquali, Hao Wu, and Frank Noe. Vampnets: Deep learning of molecular
+kinetics.Nat. Commun., 2017. in press.
+
+L. Molgedey and H. G. Schuster. Separation of a mixture of independent signals using time
+delayed correlations.Phys. Rev. Lett., 72:3634–3637, 1994.
+
+Clarence W. Rowley, Igor Mezić, Shervin Bagheri, Philipp Schlatter, and Dan S. Henningson.
+Spectral analysis of nonlinear flows.J. Fluid Mech., 641:115, nov 2009.
+
+ Peter J. Schmid. Dynamic mode decomposition of numerical and experimental data.
+J. FluidMech., 656:5–28, jul 2010.
+
+C. R. Schwantes and V. S. Pande. Modeling molecular kinetics with tica and the kernel trick.
+J. Chem. Theory Comput., 11:600–608, 2015.
+
+Jonathan H. Tu, Clarence W. Rowley, Dirk M. Luchtenburg, Steven L. Brunton, and J. Nathan
+Kutz. On dynamic mode decomposition: Theory and applications.J. Comput. Dyn., 1(2):391–421, dec 2014.
+
+M. O. Williams, I. G. Kevrekidis, and C. W. Rowley.  A data–driven approximation of the
+koopman operator: Extending dynamic mode decomposition.J. Nonlinear Sci., 25:1307–1346, 2015.
